@@ -26,6 +26,14 @@
 
 var isReady = false;
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    isReady = true;
+});
+
+
+
 export class Toast{
     static {
         Object.defineProperty(this, 'LENGTH_LONG', {
@@ -135,6 +143,41 @@ export class Toast{
  
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    isReady = true;
-});
+export class ToastDisplayer{
+    #toastContainer;
+
+    constructor(_container){
+        if (typeof _container === 'string'){
+            this.#toastContainer = document.getElementById(_container);
+        }else if (_container instanceof HTMLElement){
+            this.#toastContainer = _container;
+        }
+    }
+
+
+    display(_text, _duration=3000){ 
+        if (!(typeof _text === 'string')) throw "Error: the attribute of display must be a textLike.";
+        if (_duration < 0) throw "Error : you must specify a valid duration.";
+
+        const toast = document.createElement('div');
+
+        // might change in the future
+        toast.className = 'squared_toast';
+        toast.innerText = _text;
+ 
+        this.#toastContainer.appendChild(toast);
+
+        requestAnimationFrame(() => {
+            toast.classList.add('show');
+        });
+    
+        setTimeout(() => {
+            toast.classList.remove('show');
+
+            setTimeout(() => {
+                this.#toastContainer.removeChild(toast); 
+            }, 300);
+
+        }, _duration);
+    }
+}

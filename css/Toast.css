@@ -61,3 +61,21 @@
     transition: all 1.5s ease;
 }
  
+
+/* special toast that accumulate inside a view*/
+.squared_toast {
+    background-color: var(--toast_background);
+    color: var(--toast_text);
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.squared_toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,9 +1,27 @@
-import {Toast} from "/js/Toast.js";
+import {Toast, ToastDisplayer} from "/js/Toast.js";
+
+
+var toast;
+var toast_displayer;
+
+var toastID = 1;
+
+document.showToast = function showToast(){
+
+    toast.show();
+}
+
+document.addNotification = function addNotification(){
+    toast_displayer.display("notification "+toastID);
+    toastID++;
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // a reusable Toast. 
-    var toast = Toast.makeText(document.body, "Hello, world !", Toast.LENGTH_LONG, true);
+    toast = Toast.makeText(document.body, "Hello, world !", Toast.LENGTH_LONG, true);
     
-    setInterval(()=>{toast.show()},4000);
-
+    // a multyToast displayer
+    toast_displayer = new ToastDisplayer(document.getElementById("notifications"));
+    
 });

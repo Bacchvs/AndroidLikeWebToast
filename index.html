@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+     <!--
+     * Example HTML for AndroidLikeWebToast
+     * Copyright (c) 2024 Arnaud Sénécaut
+     * License: MIT (https://opensource.org/licenses/MIT)
+     * Description: This HTML file demonstrates the usage of AndroidLikeWebToast for displaying toast notifications.
+     *
+     * Includes:
+     * - External JavaScript module: /js/main.js
+     * - CSS stylesheets: /css/style.css and /css/Toast.css
+     *
+     * This file is provided "as is", without warranty of any kind.
+     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <script type="module" src="/js/main.js" ></script> 
@@ -11,6 +23,11 @@
     <link href="/css/Toast.css" rel="stylesheet"/> 
 </head>
 <body>
-    <!-- Put your content as you wish -->
+    <div class="exemple">
+        <h1>Test AndroidLikeWebToast</h1>
+        <button class="btn" onclick="document.showToast()">Show Toast</button>
+        <button class="btn" onclick="document.addNotification()">Add Notification</button>
+    </div>
+    <div id="notifications"></div>
 </body>
 </html>
