@@ -1,0 +1,26 @@
+ 
+@font-face {
+    font-family: "Pacifico";
+    src: url("../font/Pacifico.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "CascadiaCode";
+    src: url("../font/CascadiaCode.woff2") format("woff2");
+}
+
+
+html, body {  
+    user-select: none;
+    margin: 0;
+    height: fit-content;
+ 
+    font-family: Arial, sans-serif;
+    color: var(--textColor);
+    background-color:  white; /* Couleur de fond pour éviter le blanc */
+   
+    height: 10000px;
+}
+ 
+ 

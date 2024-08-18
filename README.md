@@ -15,7 +15,8 @@ AndroidLikeWebToast is a versatile JavaScript module designed to bring the famil
 
 ## Usage
 
-1. Include the `Toast.js` and `Toast.css` files in your HTML.
+1. Include the `Toast.css` file in your HTML.
+2. Import the `Toast.js` file in your main javascript file.
 3. Instantiate the `Toast` class and use its methods to display notifications.
 
 ## Exemple
@@ -24,10 +25,15 @@ AndroidLikeWebToast is a versatile JavaScript module designed to bring the famil
 const toast = Toast.makeText(document.body, "Hello, world !", Toast.LENGTH_LONG);
 toast.show();
 ```
+**Note:** Toast messages have a one-shot instance. Set the sticky flag to `true` if you want your message to be reusable. Like so :
 
+```javascript
+const toast = Toast.makeText(document.body, "Hello, world !", Toast.LENGTH_LONG, true); 
+```
+ 
 ## Author
 
-Arnaud Sénécaut
+ ```Arnaud Sénécaut``` 
 
 ## License
 

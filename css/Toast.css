@@ -1,0 +1,40 @@
+
+:root{
+    --toast_text: aliceblue;
+    --toast_border: none;
+    --toast_background : #636363; 
+    --toast_radius: 10000px;
+    --toast_padding: 0.75%;
+}
+ 
+
+
+.toast{
+    color: var(--toast_text);
+    border: var(--toast_border);
+    background-color: var(--toast_background);
+    border-radius: var(--toast_radius);
+ 
+    padding: var(--toast_padding);
+    
+    
+    width: fit-content;
+   
+    height: fit-content;
+    
+  position: fixed; /* Fixe l'élément par rapport à la fenêtre */
+  bottom: 5%;       /* Positionne l'élément en bas de la fenêtre */
+  left: 50%;       /* Aligne l'élément au centre horizontalement */
+  transform: translateX(-50%); /* Recentre l'élément par rapport à son milieu */
+ 
+   transition: all 1.5s ease;
+}
+ 
+.toast_hide{
+    opacity: 0; 
+    overflow: hidden;
+    visibility: hidden; /* Assure que l'élément ne prend pas de place quand il est caché */
+    transition: all 1.5s ease;
+
+}
+ 
