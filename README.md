@@ -1,10 +1,10 @@
-# AndroidLikeWebToast v1.0.0
+# NotificationsJS v1.0.0
 
-**A JavaScript module for displaying toast notifications with an Android-like appearance and behavior.**
+**A JavaScript module for displaying notifications or Toast with an Android-like appearance and behavior.**
 
 ## Description
 
-AndroidLikeWebToast is a versatile JavaScript module designed to bring the familiar and sleek look of Android-style toast notifications to web applications. This module provides a simple API for creating and managing toast notifications that blend seamlessly with web interfaces, delivering a consistent and user-friendly experience.
+NotificationsJS is a versatile JavaScript module designed to bring the familiar and sleek look of Android-style toast notifications to web applications. This module provides a simple API for creating and managing toast notifications that blend seamlessly with web interfaces, delivering a consistent and user-friendly experience.
 
 ## Features
 
