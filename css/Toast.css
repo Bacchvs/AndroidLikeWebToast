@@ -1,4 +1,26 @@
 
+/*!
+ * Notification Toast CSS Styles v1.0.0
+ * Copyright (c) 2024 Bacchvs -- Sén.Ar. 
+ * License: MIT (https://opensource.org/licenses/MIT)
+ * Description: CSS styles for displaying toast notifications with an Android-like appearance.
+ * 
+ * These styles are designed to provide the sleek and modern look of Android toast notifications
+ * for your web applications. They ensure that notifications are visually appealing and consistent
+ * with Android design principles.
+ *
+ * Usage:
+ * - Include this CSS file in your HTML to apply styles to your toast notifications.
+ * - Ensure that your notification HTML elements use the appropriate classes defined in this file.
+ *
+ * Author: A.S aka Bacchvs
+ * GitHub: https://github.com/Bacchvs/AndroidLikeWebToast
+ *
+ * This software is provided "as is", without warranty of any kind.
+ * See the LICENSE file for more details.
+ */
+
+
 :root{
     --toast_text: aliceblue;
     --toast_border: none;
@@ -9,6 +31,7 @@
  
 
 
+/* the toast class */
 .toast{
     color: var(--toast_text);
     border: var(--toast_border);
@@ -22,19 +45,19 @@
    
     height: fit-content;
     
-  position: fixed; /* Fixe l'élément par rapport à la fenêtre */
-  bottom: 5%;       /* Positionne l'élément en bas de la fenêtre */
-  left: 50%;       /* Aligne l'élément au centre horizontalement */
-  transform: translateX(-50%); /* Recentre l'élément par rapport à son milieu */
+    position: fixed;  
+    bottom: 5%;     
+    left: 50%;        
+    transform: translateX(-50%); 
  
    transition: all 1.5s ease;
 }
  
+/* Hide the toast*/
 .toast_hide{
     opacity: 0; 
     overflow: hidden;
-    visibility: hidden; /* Assure que l'élément ne prend pas de place quand il est caché */
+    visibility: hidden;  
     transition: all 1.5s ease;
-
 }
  

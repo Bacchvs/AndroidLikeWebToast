@@ -91,7 +91,7 @@ export class Toast{
 
         _context.appendChild(this.#toastElement);
 
-        if (this.#toastElement.clientWidth > window.innerWidth) throw "Le toast est trop long !";
+        if (this.#toastElement.clientWidth > window.innerWidth) throw "The Toast is too long in length !";
  
     }
 
@@ -106,7 +106,7 @@ export class Toast{
 
 
     show(){
-        if(this.#isDead) throw `Le toast #${this.#id} a déjà été consommé. (utilisez 'sticky' pour un toast à usage multiple).`;
+        if(this.#isDead) throw `The Toast #${this.#id} has already been consumed. (use 'sticky' attribute for a reusable Toast).`;
         this.#toastElement.classList.remove('toast_hide');
 
         setTimeout(() => {
@@ -117,8 +117,9 @@ export class Toast{
             /// supprime l'élément après utilisation.
             if (! this.#sticky){
                 setTimeout(()=>{this.#toastElement.remove()}, 1500);
+                this.#isDead = true;
             }
-            this.#isDead = true;
+            
         }, this.#length);
     }
 
